@@ -64,9 +64,11 @@ def generate_answer(question):
     content = extract_content(search_results)
 
     if len(content) > 0:
-        return content[0]
+        answer = "\n".join(content)  # Concatenate all content with line breaks
     else:
-        return "No answer found."
+        answer = "No answer found."
+
+    return answer
 
 
 if __name__ == '__main__':
